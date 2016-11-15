@@ -1,6 +1,5 @@
 package com.wty.app.reduxandroiddemo.reduce;
 
-import com.wty.app.reduxandroiddemo.state.ChangeTextState;
 import com.wty.app.reduxandroiddemo.state.SecondState;
 import com.wty.app.reduxlib.action.ReduxAction;
 import com.wty.app.reduxlib.reduce.ReduxReduce;
