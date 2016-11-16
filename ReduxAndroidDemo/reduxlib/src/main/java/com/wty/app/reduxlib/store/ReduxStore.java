@@ -12,16 +12,15 @@ import de.greenrobot.event.EventBus;
 /**
  * @Desc  Store 根据传进来的Action去遍历reducer列表去处理
  **/
-public class ReduxStore {
+public class ReduxStore<State> {
 
     private static ReduxStore defaultInstance;
     private EventBus eventBus;
-
-    private List<ReduxReduce> reducers;
+    private List<ReduxReduce> reducers;//数据处理器-reducer
 
     public static ReduxStore getInstance() {
         if (defaultInstance == null) {
-            synchronized (EventBus.class) {
+            synchronized (ReduxStore.class) {
                 if (defaultInstance == null) {
                     defaultInstance = new ReduxStore();
                 }
@@ -79,7 +78,14 @@ public class ReduxStore {
             if (localState != null) {
                 eventBus.post(localState);
             }
-
         }
+    }
+
+    /**
+     * 状态改变的回调接口
+     * @param <S> 状态
+     */
+    public interface IStateChangeListener<S> {
+        void onStateChanged(S state);
     }
 }

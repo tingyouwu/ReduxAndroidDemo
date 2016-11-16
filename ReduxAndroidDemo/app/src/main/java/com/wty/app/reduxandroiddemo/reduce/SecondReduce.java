@@ -10,8 +10,8 @@ import com.wty.app.reduxlib.state.ReduxState;
  **/
 public class SecondReduce implements ReduxReduce {
 
-    public static final int ACTION_SECOND_SHOWLOADING = 3;
-    public static final int ACTION_SECOND_SHOWTEXT = 4;
+    public static final String ACTION_SECOND_SHOWLOADING = "ACTION_SECOND_SHOWLOADING";
+    public static final String ACTION_SECOND_SHOWTEXT = "ACTION_SECOND_SHOWTEXT";
 
     @Override
     public ReduxState handleAction(ReduxAction action) {

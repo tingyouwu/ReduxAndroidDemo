@@ -1,6 +1,5 @@
 package com.wty.app.reduxandroiddemo.reduce;
 
-
 import com.wty.app.reduxandroiddemo.state.ChangeTextState;
 import com.wty.app.reduxlib.action.ReduxAction;
 import com.wty.app.reduxlib.reduce.ReduxReduce;
@@ -11,8 +10,8 @@ import com.wty.app.reduxlib.state.ReduxState;
  **/
 public class ChangeTextReduce implements ReduxReduce {
 
-    public static final int ACTION_SHOWLOADING = 0;
-    public static final int ACTION_SHOWTEXT = 1;
+    public static final String ACTION_SHOWLOADING = "ACTION_SHOWLOADING";
+    public static final String ACTION_SHOWTEXT = "ACTION_SHOWTEXT";
 
     @Override
     public ReduxState handleAction(ReduxAction action) {

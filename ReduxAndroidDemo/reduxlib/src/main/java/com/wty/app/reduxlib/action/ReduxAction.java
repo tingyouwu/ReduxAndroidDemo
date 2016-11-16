@@ -5,22 +5,23 @@ import java.util.HashMap;
 
 /**
  * @Desc  Action 负责获取原生数据，或者只是描述一种状态
+ *                是把数据传到 store 的有效载体。它是store的唯一数据来源
  **/
 public class ReduxAction {
 
-    private int type;
+    private String type;
     private HashMap<String, Object> hashMap;
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
 
-    public ReduxAction(int type) {
+    public ReduxAction(String type) {
         this.type = type;
     }
 
-    public ReduxAction(int type, HashMap<String, Object> hashMap) {
+    public ReduxAction(String type, HashMap<String, Object> hashMap) {
         this.type = type;
         this.hashMap = hashMap;
     }
